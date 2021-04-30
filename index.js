@@ -110,7 +110,7 @@ for (let i = 0; i < questions.length; i++) {
   h3.innerText = question.question;
   form.append(h3);
 
-  const ul = document.createElement("ul");
+  const ol = document.createElement("ol");
 
   //TODO
   //   STEP 1 : Convert options object to array and store it in setOfOptions variable
@@ -142,6 +142,7 @@ for (let i = 0; i < questions.length; i++) {
 
     var label = document.createElement("label");
     label.innerHTML = value;
+
     // label.innerHTML = option.b;
     // label.innerHTML = option.c;
 
@@ -155,9 +156,9 @@ for (let i = 0; i < questions.length; i++) {
     // answer3.appendChild(label, inputValue);
 
     // ul.append(answer1, answer2, answer3);
-    ul.append(answer1);
+    ol.append(answer1);
   }
 
-  form.appendChild(ul);
+  form.appendChild(ol);
   // }
 }
