@@ -9,6 +9,11 @@
   </head>
 
   <body>
+    <div class="header" id="myHeader">
+      <h1>
+        <span>JS Quiz</span>
+      </h1>
+    </div>
     <form>
       <!-- <h3>
               Question 1
@@ -37,13 +42,11 @@
 
 
             </ul> -->
-
-      <!-- | <button id="submit">Submit</button> -->
-      <!-- <button id="reset">Reset</button> -->
     </form>
-    <button id="submit">Submit</button>
-    <button id="reset">Reset</button>
-
+    <div class="container">
+      <input type="button" value="Submit" class="submit" onClick="check()" />
+      <input type="reset" value="Reset" id="reset" onClick="process()" />
+    </div>
     <script src="index.js"></script>
   </body>
 </html>

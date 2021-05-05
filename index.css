@@ -1,5 +1,39 @@
-h1 {
-background-color:gray;
-text-align:center;
+form {
+  text-align: left;
+}
 
+li {
+  list-style-type: none;
+}
+
+.header {
+  text-align: center;
+  position: sticky;
+  top: 0;
+}
+h1 {
+  font-size: 60px;
+  color: rgb(18, 3, 37);
+  background-color: gray;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+.submit {
+  background-color: darkcyan;
+  width: 100px;
+  padding: 5px 5px 5px 5px;
+}
+input.submit:hover {
+  background-color: darkgray;
+}
+#reset {
+  background-color: darkcyan;
+  width: 100px;
+  padding: 5px 5px 5px 5px;
+}
+input#reset:hover {
+  background-color: darkgray;
+}
+body {
+  background-color: rgb(238, 228, 211);
 }

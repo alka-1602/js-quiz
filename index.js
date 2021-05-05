@@ -6,7 +6,7 @@ const questions = [
       b: "Sheryl Sandberg",
       c: "Brendan Eich",
     },
-    correctanswer: "c",
+    correctanswer: "Brendan Eich",
   },
   {
     question: "Which one of these is a JavaScript package manager?",
@@ -15,90 +15,85 @@ const questions = [
       b: "npm",
       c: "typescript",
     },
-    correctanswer: "b",
+    correctanswer: "npm",
   },
-  {
-    question: "Which tool can you use to ensure code quality?",
-    options: {
-      a: "ESLint",
-      b: "Angular",
-      c: "jQuery",
-    },
-    correctanswer: "a",
-  },
-  {
-    question: "Who invented javascript?",
-    options: {
-      a: "Douglas crockford",
-      b: "Sheryl Sandberg",
-      c: "Brendan Eich",
-      d: "Guido van Rossum",
-    },
-    correctanswer: "c",
-  },
-  {
-    question: "Who invented javascript?",
-    options: {
-      a: "Douglas crockford",
-      b: "Sheryl Sandberg",
-      c: "Brendan Eich",
-      d: "Guido van Rossum",
-    },
-    correctanswer: "c",
-  },
-  {
-    question: "Who invented javascript?",
-    options: {
-      a: "Douglas crockford",
-      b: "Sheryl Sandberg",
-      c: "Brendan Eich",
-      d: "Guido van Rossum",
-    },
-    correctanswer: "c",
-  },
-  {
-    question: "Who invented javascript?",
-    options: {
-      a: "Douglas crockford",
-      b: "Sheryl Sandberg",
-      c: "Brendan Eich",
-      d: "Guido van Rossum",
-    },
-    correctanswer: "c",
-  },
-  {
-    question: "Who invented javascript?",
-    options: {
-      a: "Douglas crockford",
-      b: "Sheryl Sandberg",
-      c: "Brendan Eich",
-      d: "Guido van Rossum",
-    },
-    correctanswer: "c",
-  },
-  {
-    question: "Who invented javascript?",
-    options: {
-      a: "Douglas crockford",
-      b: "Sheryl Sandberg",
-      c: "Brendan Eich",
-      d: "Guido van Rossum",
-    },
-    correctanswer: "c",
-  },
-  {
-    question: "Who invented javascript?",
-    options: {
-      a: "Douglas crockford",
-      b: "Sheryl Sandberg",
-      c: "Brendan Eich",
-      d: "Guido van Rossum",
-    },
-    correctanswer: "c",
-  },
+  // {
+  //   question: "Which tool can you use to ensure code quality?",
+  //   options: {
+  //     a: "ESLint",
+  //     b: "Angular",
+  //     c: "jQuery",
+  //   },
+  //   correctanswer: "ESLint",
+  // },
+  // {
+  //   question: "JavaScript is a ___ -side programming language.?",
+  //   options: {
+  //     a: "client",
+  //     b: "Server",
+  //     c: "both",
+  //   },
+  //   correctanswer: "client",
+  // },
+  // {
+  //   question:
+  //     "Which built-in method calls a function for each element in the array??",
+  //   options: {
+  //     a: "while()",
+  //     b: "loop()",
+  //     c: "forEach()",
+  //   },
+  //   correctanswer: "forEcah()",
+  // },
+  // {
+  //   question:
+  //     "Which of the following is the correct syntax to print a page using JavaScript?",
+  //   options: {
+  //     a: "window.print()",
+  //     b: "browser.print()",
+  //     c: "navigator.print()",
+  //   },
+  //   correctanswer: "window.print()",
+  // },
+  // {
+  //   question:
+  //     " What is the HTML tag under which one can write the JavaScript code?",
+  //   options: {
+  //     a: "<javascript>",
+  //     b: "<scripted>",
+  //     c: "<script>",
+  //   },
+  //   correctanswer: "<script>",
+  // },
+  // {
+  //   question: "what is the correct file extension for Javascript files?",
+  //   options: {
+  //     a: " .java",
+  //     b: " .js",
+  //     c: ".javascript",
+  //   },
+  //   correctanswer: ".js",
+  // },
+  // {
+  //   question: "Which type of JavaScript language is ___?",
+  //   options: {
+  //     a: "Object-Oriented",
+  //     b: "Object-Based",
+  //     c: "Assembly-language",
+  //   },
+  //   correctanswer: "Object-Based",
+  // },
+  // {
+  //   question: "Who invented javascript?",
+  //   options: {
+  //     a: "Douglas crockford",
+  //     b: "Sheryl Sandberg",
+  //     c: "Brendan Eich",
+  //   },
+  //   correctanswer: "Brendan Eich",
+  // },
 ];
 
-//const option = options;
 //const setOfOptions = Object.keys(options);
 //console.log("setOfQuestions");
 
@@ -110,7 +105,7 @@ for (let i = 0; i < questions.length; i++) {
   h3.innerText = question.question;
   form.append(h3);
 
-  const ol = document.createElement("ol");
+  const ul = document.createElement("ul");
 
   //TODO
   //   STEP 1 : Convert options object to array and store it in setOfOptions variable
@@ -133,32 +128,85 @@ for (let i = 0; i < questions.length; i++) {
     console.log({ key, value });
 
     const answer1 = document.createElement("li");
-    // const answer2 = document.createElement("li");
-    // const answer3 = document.createElement("li");
+    // custom data attribute
+    answer1.setAttribute("data-question", `${i}-${value}`);
 
     const inputValue = document.createElement("input");
     inputValue.setAttribute("type", "radio");
     inputValue.setAttribute("name", "x" + i);
+    inputValue.setAttribute("value", value);
 
     var label = document.createElement("label");
     label.innerHTML = value;
 
-    // label.innerHTML = option.b;
-    // label.innerHTML = option.c;
-
     answer1.appendChild(inputValue);
     answer1.appendChild(label, inputValue);
 
-    // answer2.appendChild(inputValue);
-    // answer2.appendChild(label, inputValue);
-
-    // answer3.appendChild(inputValue);
-    // answer3.appendChild(label, inputValue);
-
     // ul.append(answer1, answer2, answer3);
-    ol.append(answer1);
+    ul.append(answer1);
   }
 
-  form.appendChild(ol);
+  form.appendChild(ul);
   // }
 }
+
+function check() {
+  //document.write("done");
+  const form = document.querySelector("form");
+  const data = Array.from(new FormData(form));
+  //console.log(data);
+  //console.log(questions, "questions");
+
+  // Validating if all the questions are answered
+  if (data.length !== questions.length) {
+    // invalid
+
+    alert("Answer all the questions!");
+  } else {
+    // valid
+    // all the questions are answered. Hence, process the answers
+    //alert("All questions are answered!");
+
+    questions.forEach((q, i) => {
+      const userAnswer = data[i][1];
+      // query for the user selected option
+      const selectedOption = document.querySelector(
+        `li[data-question="${i}-${userAnswer}"]`
+      );
+
+      // check if the user answer is the correct answer for the question
+      if (q.correctanswer === userAnswer) {
+        // color the correct answer green
+        selectedOption.style.color = "lightgreen";
+        console.log("correct");
+      } else {
+        // color the wrong answer red
+
+        selectedOption.style.color = "red";
+        //console.log("incorrect");
+        // color the correct answer green
+        const correctOption = (document.querySelector(
+          `li[data-question="${i}-${q.correctanswer}"]`
+        ).style.color = "lightgreen");
+      }
+    });
+    // otherwise,
+    // grab all the instances of radio inputs from DOM
+    // check which instance atches the correct answer
+    // 1. turn the user chosen option to red with bold text
+    // 2. turn the correct option to green
+    //}
+    // }
+  }
+}
+
+function process() {
+  const form = document.querySelector("form").reset();
+  // const data = Array.from(new FormData(form));
+  // if (data.length == questions.length) {
+  //   document.querySelector("#reset").reset = true;
+  // } else {
+}
+//}
+// query for the form
+//made array of
