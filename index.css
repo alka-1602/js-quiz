@@ -1,5 +1,5 @@
 form {
-  text-align: left;
+  margin-left: 150px;
 }
 
 li {
@@ -22,6 +22,7 @@ h1 {
   background-color: darkcyan;
   width: 100px;
   padding: 5px 5px 5px 5px;
+  margin-right: 30px;
 }
 input.submit:hover {
   background-color: darkgray;
@@ -35,5 +36,5 @@ input#reset:hover {
   background-color: darkgray;
 }
 body {
-  background-color: rgb(238, 228, 211);
+  background-color: rgb(220, 231, 190);
 }

@@ -177,7 +177,8 @@ function check() {
       // check if the user answer is the correct answer for the question
       if (q.correctanswer === userAnswer) {
         // color the correct answer green
-        selectedOption.style.color = "lightgreen";
+        selectedOption.style.color = "limegreen";
+
         console.log("correct");
       } else {
         // color the wrong answer red
@@ -187,7 +188,7 @@ function check() {
         // color the correct answer green
         const correctOption = (document.querySelector(
           `li[data-question="${i}-${q.correctanswer}"]`
-        ).style.color = "lightgreen");
+        ).style.color = "limegreen");
       }
     });
     // otherwise,
@@ -202,11 +203,4 @@ function check() {
 
 function process() {
   const form = document.querySelector("form").reset();
-  // const data = Array.from(new FormData(form));
-  // if (data.length == questions.length) {
-  //   document.querySelector("#reset").reset = true;
-  // } else {
 }
-//}
-// query for the form
-//made array of
