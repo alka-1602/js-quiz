@@ -49,11 +49,13 @@ label {
 
 label::before {
   content: "";
-  background-color: green;
+  background-color: rgb(20, 221, 104);
   background-position: center;
   background-size: contain;
-  width: 20px;
-  height: 10px;
+  width: 15px;
+  height: 15px;
   position: absolute;
-  margin-left: 300px;
+  left: -44px;
+  top: -0.28px;
+  border-radius: 50%;
 }

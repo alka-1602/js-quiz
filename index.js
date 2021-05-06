@@ -160,22 +160,25 @@ function check() {
 
     questions.forEach((q, i) => {
       const userAnswer = data[i][1];
+
       // query for the user selected option
       const selectedOption = document.querySelector(
         `li[data-question="${i}-${userAnswer}"]`
       );
+
       //let userOption = `${selectedOption}`;
       // userOption.bold();
       // check if the user answer is the correct answer for the question
       if (q.correctanswer === userAnswer) {
         // color the correct answer green
         selectedOption.style.color = "limegreen";
-
+      
         console.log("correct");
       } else {
         // color the wrong answer red
 
         selectedOption.style.color = "red";
+      
         //console.log("incorrect");
         // color the correct answer green
         const correctOption = (document.querySelector(
