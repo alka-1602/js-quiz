@@ -196,6 +196,6 @@ function check() {
 function process() {
   const form = document.querySelector("form").reset();
   const container = document
-    .querySelectorAll(`li[data-question="${i}-${q.options}"]`)
+    .querySelectorAll(`li[data-question="${i}-${q.question}"]`)
     .style.color.reset();
 }

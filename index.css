@@ -52,8 +52,8 @@ label::before {
   background-color: green;
   background-position: center;
   background-size: contain;
-  width: 32px;
-  height: 32px;
+  width: 20px;
+  height: 10px;
   position: absolute;
   margin-left: 300px;
 }
