@@ -1,5 +1,5 @@
 form {
-  margin-left: 150px;
+  margin-left: 200px;
 }
 
 li {
@@ -13,7 +13,7 @@ li {
 }
 h1 {
   font-size: 60px;
-  color: rgb(18, 3, 37);
+  color: rgb(212, 151, 37);
   background-color: gray;
   padding-top: 3px;
   padding-bottom: 3px;
@@ -37,4 +37,23 @@ input#reset:hover {
 }
 body {
   background-color: rgb(220, 231, 190);
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+label {
+  position: relative;
+}
+
+label::before {
+  content: "";
+  background-color: green;
+  background-position: center;
+  background-size: contain;
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  margin-left: 300px;
 }

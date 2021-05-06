@@ -17,15 +17,15 @@ const questions = [
     },
     correctanswer: "npm",
   },
-  // {
-  //   question: "Which tool can you use to ensure code quality?",
-  //   options: {
-  //     a: "ESLint",
-  //     b: "Angular",
-  //     c: "jQuery",
-  //   },
-  //   correctanswer: "ESLint",
-  // },
+  {
+    question: "Which tool can you use to ensure code quality?",
+    options: {
+      a: "ESLint",
+      b: "Angular",
+      c: "jQuery",
+    },
+    correctanswer: "ESLint",
+  },
   // {
   //   question: "JavaScript is a ___ -side programming language.?",
   //   options: {
@@ -43,7 +43,7 @@ const questions = [
   //     b: "loop()",
   //     c: "forEach()",
   //   },
-  //   correctanswer: "forEcah()",
+  //   correctanswer: "forEach()",
   // },
   // {
   //   question:
@@ -55,21 +55,12 @@ const questions = [
   //   },
   //   correctanswer: "window.print()",
   // },
-  // {
-  //   question:
-  //     " What is the HTML tag under which one can write the JavaScript code?",
-  //   options: {
-  //     a: "<javascript>",
-  //     b: "<scripted>",
-  //     c: "<script>",
-  //   },
-  //   correctanswer: "<script>",
-  // },
+
   // {
   //   question: "what is the correct file extension for Javascript files?",
   //   options: {
-  //     a: " .java",
-  //     b: " .js",
+  //     a: ".java",
+  //     b: ".js",
   //     c: ".javascript",
   //   },
   //   correctanswer: ".js",
@@ -173,7 +164,8 @@ function check() {
       const selectedOption = document.querySelector(
         `li[data-question="${i}-${userAnswer}"]`
       );
-
+      //let userOption = `${selectedOption}`;
+      // userOption.bold();
       // check if the user answer is the correct answer for the question
       if (q.correctanswer === userAnswer) {
         // color the correct answer green
@@ -203,4 +195,7 @@ function check() {
 
 function process() {
   const form = document.querySelector("form").reset();
+  const container = document
+    .querySelectorAll(`li[data-question="${i}-${q.options}"]`)
+    .style.color.reset();
 }
